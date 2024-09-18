@@ -1,0 +1,32 @@
+[Hôtel]
+---------------------
+ID_hotel (PK)
+Nom
+Adresse
+Numéro de téléphone
+
+[Client]
+---------------------
+ID_client (PK)
+Nom
+Prénom
+Adresse
+Date de naissance
+
+[Chambre]
+---------------------
+ID_chambre (PK)
+Numéro_de_chambre
+Type_de_chambre
+Prix
+ID_hotel (FK)  ---> [Hôtel]
+
+[Réservation]
+---------------------
+ID_réservation (PK)
+Date_de_réservation
+Date_d'arrivée
+Date_de_départ
+ID_hotel (FK)  ---> [Hôtel]
+ID_client (FK)  ---> [Client]
+ID_chambre (FK)  ---> [Chambre]
